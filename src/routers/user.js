@@ -5,6 +5,12 @@ const User = require('../models/user')
 const multer = require('multer')
 const { sendWelcomeEmail, sendGoodbyeEmail } = require('../emails/account')
 const sharp = require('sharp')
+const cors = require('cors')
+
+router.use(cors({
+    origin: '*'
+}))
+
 
 router.post('/users', async (req,res) => {
     const user = new User(req.body)
