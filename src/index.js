@@ -13,7 +13,7 @@ app.use(userRouter)
 app.use(taskRouter)
 app.use(
     cors({
-        origin: '*'
+        origin: 'http://localhost:3000'
     })
 )
 
