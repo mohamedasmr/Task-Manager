@@ -11,11 +11,7 @@ const port = process.env.PORT
 app.use(express.json())
 app.use(userRouter)
 app.use(taskRouter)
-app.use(
-    cors({
-        origin: '*'
-    })
-)
+app.use(cors())
 
 app.listen(port, () => {
     console.log('Server is up on port ' + port)
